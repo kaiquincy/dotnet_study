@@ -1,0 +1,111 @@
+@model MvcMovie.Models.MovieGenreViewModel
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <!-- Header với gradient và padding hợp lý -->
+        <div class="card-header bg-gradient-primary text-white py-3">
+            <h1 class="h4 mb-0">Movie List</h1>
+        </div>
+        
+        <div class="card-body">
+            <!-- Form lọc với khoảng cách và typography rõ ràng -->
+            <form asp-controller="Movies" asp-action="Index" method="get" class="mb-4">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold" for="MovieGenre">Genre</label>
+                        <select asp-for="MovieGenre" asp-items="Model.Genres" class="form-select shadow-sm" id="MovieGenre">
+                            <option value="">All Genres</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold" for="SearchString">Title</label>
+                        <input type="text" asp-for="SearchString" class="form-control shadow-sm" placeholder="Search by title..." id="SearchString" />
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary shadow-sm w-100">
+                            <i class="fas fa-filter me-1"></i> Filter
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Nút tạo mới, căn phải và nổi bật -->
+            <div class="mb-3 text-end">
+                <a asp-action="Create" class="btn btn-success shadow-sm">
+                    <i class="fas fa-plus me-2"></i> Create New Movie
+                </a>
+            </div>
+
+            <!-- Bảng danh sách phim với hiệu ứng hover và bố cục hiện đại -->
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Movies![0].Title)</th>
+                            <th>@Html.DisplayNameFor(model => model.Movies![0].ReleaseDate)</th>
+                            <th>@Html.DisplayNameFor(model => model.Movies![0].Genre)</th>
+                            <th>@Html.DisplayNameFor(model => model.Movies![0].Price)</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Movies!)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ReleaseDate)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Genre)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary shadow-sm">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info shadow-sm">
+                                            <i class="fas fa-info-circle"></i> Details
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger shadow-sm">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Thêm script nếu cần -->
+}
+
+<style>
+    /* Gradient cho header */
+    .bg-gradient-primary {
+        background: linear-gradient(45deg, #007bff, #6610f2);
+    }
+
+    /* Hiệu ứng hover cho các nút: nâng nhẹ và chuyển mượt */
+    .btn:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Hiệu ứng hover cho hàng bảng */
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    /* Canh giữa nội dung cho cột hành động */
+    td.text-center {
+        vertical-align: middle;
+    }
+</style>

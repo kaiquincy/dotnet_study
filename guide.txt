@@ -1,0 +1,7 @@
+
+- tạo controller, view cho CRUD và db context: 
+dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc MvcMovie.Data.MvcMovieContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+
+- tạo db: dotnet ef migrations add InitialCreate
+			dotnet ef database update
+			
