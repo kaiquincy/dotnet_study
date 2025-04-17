@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "/kpOviz2RYGhJXv7Ub0UYWLErEdrKPXRSN7BX86RQ08=",
+  "Source": "PhotoOrderApi",
+  "BasePath": "_content/PhotoOrderApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PhotoOrderApi\\wwwroot",
+      "Source": "PhotoOrderApi",
+      "ContentRoot": "D:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\PhotoOrderApi\\wwwroot\\",
+      "BasePath": "_content/PhotoOrderApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj": {}
+    "D:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "d:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj": {
+    "D:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "D:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "d:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "D:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "d:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\obj\\",
+        "outputPath": "D:\\Users\\FPT APTECH\\SEMESTER 3\\.net\\Day 2\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
